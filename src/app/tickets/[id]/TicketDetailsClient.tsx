@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { QRCodeCanvas } from "qrcode.react";
+import TicketActions from "../../../components/TicketAction"; // adjust path if needed
 
 interface Ticket {
   id: string;
@@ -63,6 +64,9 @@ export default function TicketDetailsClient({ ticket }: { ticket: Ticket }) {
           <button className="border border-gray-300 py-3 px-4 rounded-lg flex items-center justify-center font-medium">
             Mobile Ticket
           </button>
+
+          {/* Custom Ticket Actions (Transfer/Sell/Order) */}
+          <TicketActions ticketId={ticket.id} />
         </div>
 
         {/* Expandable info */}
@@ -80,7 +84,12 @@ export default function TicketDetailsClient({ ticket }: { ticket: Ticket }) {
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
             </svg>
           </button>
 

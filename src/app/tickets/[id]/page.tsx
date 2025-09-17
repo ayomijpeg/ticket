@@ -1,6 +1,8 @@
 import { tickets } from "../../../data/tickets";
 import { notFound } from "next/navigation";
 import TicketDetailsClient from "./TicketDetailsClient";
+//import TicketActions from "../../../components/TicketAction";
+
 
 export default async function TicketDetailsPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;

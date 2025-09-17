@@ -7,6 +7,9 @@ import Image from "next/image";
 export default function TicketsPage() {
   const [activeTab, setActiveTab] = useState("my-tickets");
 
+  const baseClass =
+    "px-4 py-2 bg-blue-600 text-white rounded-full font-medium shadow hover:bg-blue-500 transition";
+
   return (
     <div className="max-w-2xl mx-auto p-4">
       {/* Tabs */}
@@ -60,19 +63,17 @@ export default function TicketsPage() {
                   Row {ticket.row} • Seat {ticket.seat}
                 </p>
 
-                <div className="mt-4 space-y-2">
-                  <Link
-                    href={`/tickets/${ticket.id}`}
-                    className="block text-center bg-blue-600 text-white py-2 rounded-md"
-                  >
-                    View Ticket
+                <div className="mt-4 flex justify-between items-center gap-2">
+                   <Link href={`/tickets/${ticket.id}/transfer`} className={`${baseClass} flex-1`}>
+                    Transfer
                   </Link>
-                  <Link
-                    href={`/tickets/${ticket.id}/transfer`}
-                    className="block text-center text-blue-600 underline"
-                  >
-                    Transfer Ticket
-                  </Link>
+                  <button type="button" className="flex-1 px-6 py-3 bg-gray-200 text-gray-800 rounded-full font-medium shadow hover:bg-gray-300 transition">
+                    Sell
+                  </button>
+                  <button type="button" className={`${baseClass} flex-1`}>
+                    Order
+                  </button>
+                 
                 </div>
               </div>
             </div>

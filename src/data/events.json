@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "title": "Coldplay World Tour",
+    "date": "2025-11-20",
+    "location": "London, UK",
+    "category": "Music",
+    "image": "/images/music1.jpeg"
+  },
+  {
+    "id": "2",
+    "title": "Drake Live in NYC",
+    "date": "2025-12-05",
+    "location": "New York, USA",
+    "category": "Music",
+    "image": "/images/music1.jpeg"
+  },
+  {
+    "id": "3",
+    "title": "Ed Sheeran Acoustic Night",
+    "date": "2026-01-10",
+    "location": "Dublin, Ireland",
+    "category": "Music",
+    "image": "/images/music1.jpeg"
+  },
+  {
+    "id": "4",
+    "title": "Kevin Hart Live",
+    "date": "2025-10-15",
+    "location": "Los Angeles, USA",
+    "category": "Comedy",
+    "image": "/images/comedy1.jpeg"
+  },
+  {
+    "id": "5",
+    "title": "NBA Finals Game 7",
+    "date": "2025-06-20",
+    "location": "Chicago, USA",
+    "category": "Sports",
+    "image": "/images/sport1.jpeg"
+  },
+  {
+    "id": "6",
+    "title": "Taylor Swift: Eras Tour",
+    "date": "2025-08-12",
+    "location": "Sydney, Australia",
+    "category": "Music",
+    "image": "/images/music2.jpeg"
+  },
+  {
+    "id": "7",
+    "title": "UFC 315: Championship Fight Night",
+    "date": "2025-09-28",
+    "location": "Las Vegas, USA",
+    "category": "Sports",
+    "image": "/images/sport2.jpeg"
+  }
+]

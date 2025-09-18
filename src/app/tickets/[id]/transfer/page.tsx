@@ -1,10 +1,12 @@
 "use client";
 import { tickets } from "../../../../data/tickets";
+import React from "react";
 import { notFound } from "next/navigation";
 import { useState } from "react";
 
-export default function TransferTicket({ params }: { params: { id: string } }) {
-  const ticket = tickets.find((t) => t.id === params.id);
+export default function TransferTicket({ params }: { params: Promise<{ id: string }> }) {
+  const unwrappedParams = React.use(params); // unwrap the params
+  const ticket = tickets.find((t) => t.id === unwrappedParams.id);
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",

@@ -55,13 +55,13 @@ export default function TicketsPage() {
           {/* Carousel Buttons */}
           <button
             onClick={() => scrollByTicket("prev")}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-200 p-2 rounded-full shadow hover:bg-gray-300"
+            className="absolute left-0 top-3/4 -translate-y-1/2 z-10 bg-gray-200 p-2 rounded-full shadow hover:bg-gray-300"
           >
             ‹
           </button>
           <button
             onClick={() => scrollByTicket("next")}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-200 p-2 rounded-full shadow hover:bg-gray-300"
+            className="absolute right-0 top-3/4 -translate-y-1/2 z-10 bg-gray-200 p-2 rounded-full shadow hover:bg-gray-300"
           >
             ›
           </button>

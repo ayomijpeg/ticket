@@ -10,7 +10,7 @@ export default function TicketsPage() {
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const baseClass =
-    "px-4 py-2 bg-blue-600 text-white rounded-full font-medium shadow hover:bg-blue-500 transition";
+  "px-6 py-2 bg-blue-600 text-white rounded-[5px] font-medium shadow hover:bg-blue-500 transition";
 
   const scrollByTicket = (direction: "next" | "prev") => {
     if (!carouselRef.current) return;
@@ -96,39 +96,48 @@ export default function TicketsPage() {
                   </p>
 
                   <div className="flex flex-col items-center gap-4 mt-4">
-                    <button className="w-40 h-12 bg-gray-200 text-black rounded-[8px] font-medium shadow hover:bg-gray-300 transition">
+                    <button className="w-40 h-12  text-white rounded-[8px] font-medium shadow hover:bg-gray-500  transition">
                       Mobile Ticket
                     </button>
 
                     <Link
                       href={`/tickets/${ticket.id}/transfer`}
-                      className="w-40 h-12 flex items-center justify-center gap-2 bg-blue-600 text-white rounded-[8px] font-medium shadow hover:bg-blue-500 transition"
+                      className="w-75 h-12 flex items-center justify-center gap-2 bg-blue-600 text-white rounded-[2px] font-medium shadow hover:bg-blue-500 transition"
                     >
-                      <QrCodeIcon className="w-5 h-5 text-white" />
+                      <QrCodeIcon className="w-4 h-5 text-white" />
                       View Ticket
                     </Link>
 
-                    <button className="w-40 h-12 bg-gray-200 text-black rounded-[8px] font-medium shadow hover:bg-gray-300 transition">
+                    <button className="w-40 h-12  text-white rounded-[8px] font-medium shadow hover:bg-gray-500 transition">
                       Ticket Details
                     </button>
                   </div>
 
                   <hr className="border-t border-gray-300 my-4" />
 
-                  <div className="mt-4 flex justify-between items-center gap-2">
-                    <Link href={`/tickets/${ticket.id}/transfer`} className={`${baseClass} flex-1`}>
-                      Transfer
-                    </Link>
-                    <button
-                      type="button"
-                      className="flex-1 px-6 py-3 bg-gray-200 text-gray-800 rounded-full font-medium shadow hover:bg-gray-300 transition"
-                    >
-                      Sell
-                    </button>
-                    <button type="button" className={`${baseClass} flex-1`}>
-                      Order
-                    </button>
-                  </div>
+                 <div className="mt-4 flex gap-2">
+  <Link
+    href={`/tickets/${ticket.id}/transfer`}
+    className={`${baseClass} flex-1 text-center`}
+  >
+    Transfer
+  </Link>
+
+  <button
+    type="button"
+    className="flex-1 px-6 py-2 rounded-[5px] bg-gray-400 text-gray-800 font-medium shadow hover:bg-gray-300 transition text-center"
+  >
+    Sell
+  </button>
+
+  <button
+    type="button"
+    className={`${baseClass} flex-1 text-center`}
+  >
+    Orders
+  </button>
+</div>
+
                 </div>
               </div>
             ))}
